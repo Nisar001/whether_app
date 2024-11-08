@@ -26,8 +26,8 @@ A responsive and visually appealing weather dashboard that displays the current 
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/weather-dashboard.git
-   cd weather-dashboard
+   git clone https://github.com/Nisar001/whether-app
+   cd weather-app
 Install dependencies:
 
 bash
