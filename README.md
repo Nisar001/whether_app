@@ -31,27 +31,22 @@ A responsive and visually appealing weather dashboard that displays the current 
 Install dependencies:
 
 bash
-Copy code
 npm install
 Set up environment variables:
 
 Create a .env file in the root directory of the project.
 Add your OpenWeatherMap API key to the .env file:
 plaintext
-Copy code
 REACT_APP_WEATHER_API_KEY=your_openweathermap_api_key
 Note: Make sure to replace your_openweathermap_api_key with your actual API key from OpenWeatherMap.
 Start the JSON server:
 
-In a separate terminal, run:
-bash
-Copy code
+In a separate terminal, run:bash
 npx json-server --watch db.json --port 5000
 This command will start the JSON server on port 5000, which will act as the backend for managing favorite cities.
 Start the React development server:
 
 bash
-Copy code
 npm start
 Your app will open in the browser at http://localhost:3000.
 Usage
@@ -72,7 +67,6 @@ Last Searched City:
 The application will automatically load the last searched city on refresh, providing a personalized experience.
 Folder Structure
 bash
-Copy code
 weather-dashboard/
 ├── public/
 │   ├── index.html
