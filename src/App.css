@@ -8,12 +8,14 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f0f4f8;
   color: #333;
+  transition: background-color 0.5s ease;
 }
 
 h1 {
   text-align: center;
   text-decoration: solid;
   color: #005f87;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .dashboard {
@@ -23,6 +25,7 @@ h1 {
   background-color: #fff;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  animation: slideIn 1s ease-in-out;
 }
 
 .dashboard h3 {
@@ -51,6 +54,13 @@ h1 {
   max-width: 400px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.search input[type="text"]:focus {
+  transform: scale(1.05);
+  border-color: #0077b6;
+  outline: none;
 }
 
 .search button {
@@ -60,10 +70,12 @@ h1 {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .search button:hover {
   background-color: #005f87;
+  transform: scale(1.1);
 }
 
 .weather-display {
@@ -80,6 +92,7 @@ h1 {
   width: 100%;
   border-radius: 8px;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
 }
 
 .weather-display h2 {
@@ -91,6 +104,11 @@ h1 {
   justify-content: space-between;
   padding: 10px;
   border-bottom: 1px solid #ccc;
+  transition: background-color 0.3s;
+}
+
+.weather-display .forecast-day:hover {
+  background-color: #d1ecf8;
 }
 
 .weather-display .forecast-day:last-child {
@@ -100,6 +118,11 @@ h1 {
 .weather-display img {
   width: 50px;
   height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.weather-display img:hover {
+  transform: rotate(10deg);
 }
 
 .favorites {
@@ -112,6 +135,13 @@ h1 {
   max-width: 300px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.favorites input[type="text"]:focus {
+  transform: scale(1.05);
+  border-color: #0077b6;
+  outline: none;
 }
 
 .favorites button {
@@ -122,10 +152,12 @@ h1 {
   border-radius: 5px;
   cursor: pointer;
   margin-top: 10px;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .favorites button:hover {
   background-color: #005f87;
+  transform: scale(1.1);
 }
 
 .favorites ul {
@@ -141,6 +173,11 @@ h1 {
   background-color: #e0f4ff;
   margin: 5px 0;
   border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.favorites li:hover {
+  transform: translateX(10px);
 }
 
 .favorites li span {
@@ -155,10 +192,12 @@ h1 {
   border-radius: 5px;
   cursor: pointer;
   padding: 5px 10px;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .favorites li button:hover {
   background-color: #cc0000;
+  transform: scale(1.1);
 }
 
 /* Toggle Switch */
@@ -173,6 +212,29 @@ h1 {
   margin-left: 10px;
   font-size: 1em;
   color: #0077b6;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* Responsive Styling */
